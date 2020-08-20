@@ -9,12 +9,29 @@
             max-width: 100%;
             vertical-align: top;
         }
+        /* Cuando la resolución es inferior a 768px,
+        solamente se muestra la imagen invie-responsive.png y
+        se oculta el resto. En caso contrario, permanece oculta
+        y el resto son visibles */
+        img#responsive {
+                display: none;
+            }
+        @media screen and (max-width: 768px) {
+            img {
+                display: none;
+            }
+            img#responsive {
+                display: block;
+            }
+        }
     </style>
 </head>
     <body>
+        <img src="invie-responsive.png" alt="" id="responsive">
         <img src="header.jpg" alt="">
         <img src="hero.jpg" alt="">
         <img src="acustica.jpg" alt="">
         <img src="clasica.jpg" alt="">
+        <img src="footer.jpg" alt="">
     </body>
 </html>
